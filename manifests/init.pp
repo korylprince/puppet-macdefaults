@@ -16,7 +16,7 @@ define macdefaults($domain, $key, $value = false, $type = 'string', $action = 'w
     }
   }
 
-  case $operatingsystem {
+  case $facts['os']['family'] {
    'Darwin':{
     case $action {
       'write': {
